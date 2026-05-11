@@ -5,28 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DSATBD | Dream Soft and Tech</title>
     
-    <!-- Browser Icon (Favicon) -->
     <link rel="icon" type="image/svg+xml" href="icon.svg">
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
         .bg-gradient-custom { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #9333ea 100%); }
+        
+        /* Brand Icons style */
         .brand-icon { width: 20px; height: 20px; transition: transform 0.3s ease; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); }
         .brand-icon:hover { transform: translateY(-3px) scale(1.1); }
-        .logo-img { height: 80px; width: auto; margin: 0 auto; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); }
+
+        /* Responsive Logo Sizing */
+        .logo-container {
+            width: 100%;
+            max-width: 250px; /* Mobile size */
+            margin: 0 auto;
+        }
+        @media (min-width: 768px) {
+            .logo-container { max-width: 500px; } /* Desktop size */
+        }
+
+        /* Color Animation for SVG */
+        .animated-logo {
+            width: 100%;
+            height: auto;
+            display: block;
+            /* Creating a mask effect to apply color to the black SVG shapes */
+            mask: url(logo.svg) no-repeat center;
+            -webkit-mask: url(logo.svg) no-repeat center;
+            mask-size: contain;
+            -webkit-mask-size: contain;
+            
+            /* Gradient Background */
+            background: linear-gradient(
+                to right, 
+                #ffffff 0%, 
+                #60a5fa 25%, 
+                #a855f7 50%, 
+                #60a5fa 75%, 
+                #ffffff 100%
+            );
+            background-size: 200% auto;
+            animation: shimmer 4s linear infinite;
+        }
+
+        @keyframes shimmer {
+            to { background-position: 200% center; }
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
-    <header class="bg-gradient-custom pt-16 pb-32 px-6 text-center text-white">
-        <!-- Logo Implementation -->
-        <div class="mb-6">
-            <img src="logo.svg" alt="DSATBD Logo" class="logo-img">
+    <header class="bg-gradient-custom pt-20 pb-40 px-6 text-center text-white">
+        <!-- Animated Responsive Logo -->
+        <div class="logo-container mb-8">
+            <div class="animated-logo h-32 md:h-48"></div>
         </div>
-        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">DSATBD</h1>
         <p class="text-xl opacity-90 max-w-2xl mx-auto font-medium">Official Links & Executive Team Directory</p>
     </header>
 
@@ -51,15 +88,16 @@
         <section class="mb-20">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-extrabold text-slate-800 mb-2">Our Elite Team</h2>
-                <p class="text-slate-500">Refreshing this page will shuffle the team order</p>
+                <p class="text-slate-500">The core minds driving our innovation</p>
             </div>
 
             <div id="team-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team cards are dynamically placed here by JS -->
                 
                 <!-- Hrishikesh Sarkar -->
                 <div class="group bg-white p-6 rounded-3xl shadow-md border border-slate-100 hover:shadow-2xl transition-all duration-500 text-center">
                     <img src="https://dsat.bd/storage/team_photos/BmvRTqQy9Z3TA1oQXICC5B28xMrLLkFnsVDcHwjN.jpg" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg mx-auto mb-4 grayscale group-hover:grayscale-0 transition-all" alt="Hrishikesh Sarkar">
-                    <h3 class="text-lg font-bold text-slate-800 leading-tight">Hrishikesh Sarkar</h3>
+                    <h3 class="text-lg font-bold text-slate-800">Hrishikesh Sarkar</h3>
                     <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4 mt-1">Core Developer</p>
                     <div class="flex justify-center gap-4">
                         <a href="https://github.com/ProfBackend" target="_blank"><img src="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" class="brand-icon" alt="GitHub"></a>
@@ -70,7 +108,7 @@
                 <!-- Sajjad Hosain -->
                 <div class="group bg-white p-6 rounded-3xl shadow-md border border-slate-100 hover:shadow-2xl transition-all duration-500 text-center">
                     <img src="https://dsat.bd/storage/team_photos/gqREB1v3SutRmMhgY8ht1QE4MiRSoLyrcBDc9mhT.jpg" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg mx-auto mb-4 grayscale group-hover:grayscale-0 transition-all" alt="Sajjad Hosain">
-                    <h3 class="text-lg font-bold text-slate-800 leading-tight">Sajjad Hosain</h3>
+                    <h3 class="text-lg font-bold text-slate-800">Sajjad Hosain</h3>
                     <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4 mt-1">Team Member</p>
                     <div class="flex justify-center gap-4">
                         <a href="https://github.com/sajjadhosain" target="_blank"><img src="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" class="brand-icon" alt="GitHub"></a>
@@ -82,17 +120,17 @@
                 <!-- Md Nayan Chowdhury -->
                 <div class="group bg-white p-6 rounded-3xl shadow-md border border-slate-100 hover:shadow-2xl transition-all duration-500 text-center">
                     <img src="https://ui-avatars.com/api/?name=Md+Nayan+Chowdhury&background=0D8ABC&color=fff&size=128" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg mx-auto mb-4" alt="Md Nayan Chowdhury">
-                    <h3 class="text-lg font-bold text-slate-800 leading-tight">Md Nayan Chowdhury</h3>
+                    <h3 class="text-lg font-bold text-slate-800">Md Nayan Chowdhury</h3>
                     <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4 mt-1">Team Member</p>
                     <div class="flex justify-center gap-4">
-                        <a href="https://github.com/eyesoftbd" target="_blank"><img src="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" class="brand-icon" alt="GitHub"></a>
+                        <a href="https://github.com/eyesoftbd" target="_blank"><img src="https://github.githubassets.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" class="brand-icon" alt="GitHub"></a>
                     </div>
                 </div>
 
                 <!-- Md Mahamodur Rahaman -->
                 <div class="group bg-white p-6 rounded-3xl shadow-md border border-slate-100 hover:shadow-2xl transition-all duration-500 text-center">
                     <img src="https://dsat.bd/storage/team_photos/pcLYitiWmzmVdJjgKWnulzwIy0JNRS7lYj8AibKA.jpg" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg mx-auto mb-4 grayscale group-hover:grayscale-0 transition-all" alt="Md Mahamodur Rahaman">
-                    <h3 class="text-lg font-bold text-slate-800 leading-tight">Mahamodur Rahaman</h3>
+                    <h3 class="text-lg font-bold text-slate-800">Mahamodur Rahaman</h3>
                     <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4 mt-1">Team Member</p>
                     <div class="flex justify-center gap-4">
                         <a href="https://www.facebook.com/mahmodur.rahman.541" target="_blank"><img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/ay1hV6OlegS.ico" class="brand-icon" alt="Facebook"></a>
@@ -102,7 +140,7 @@
                 <!-- Md Toriqul Hassan -->
                 <div class="group bg-white p-6 rounded-3xl shadow-md border border-slate-100 hover:shadow-2xl transition-all duration-500 text-center">
                     <img src="https://dsat.bd/storage/team_photos/B2xsC8bhztPXXicttsj7x5WdMig2Xp3oSsHxjn9m.jpg" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg mx-auto mb-4 grayscale group-hover:grayscale-0 transition-all" alt="Md Toriqul Hassan">
-                    <h3 class="text-lg font-bold text-slate-800 leading-tight">Toriqul Hassan</h3>
+                    <h3 class="text-lg font-bold text-slate-800">Toriqul Hassan</h3>
                     <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4 mt-1">Team Member</p>
                     <div class="flex justify-center gap-4">
                         <a href="https://www.facebook.com/toriqulhasan.tarak" target="_blank"><img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/ay1hV6OlegS.ico" class="brand-icon" alt="Facebook"></a>
@@ -112,7 +150,7 @@
                 <!-- A. K. M. Bashiul Alam -->
                 <div class="group bg-white p-6 rounded-3xl shadow-md border border-slate-100 hover:shadow-2xl transition-all duration-500 text-center">
                     <img src="https://dsat.bd/storage/team_photos/Epe8K4k0xByHTsDWtM4TXEZKeI66DHJHVGSXG2JV.jpg" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg mx-auto mb-4 grayscale group-hover:grayscale-0 transition-all" alt="A. K. M. Bashiul Alam">
-                    <h3 class="text-lg font-bold text-slate-800 leading-tight">A.K.M Basiul Alam</h3>
+                    <h3 class="text-lg font-bold text-slate-800">A.K.M Basiul Alam</h3>
                     <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4 mt-1">Team Member</p>
                     <div class="flex justify-center gap-4">
                         <a href="https://www.facebook.com/Basourav.3" target="_blank"><img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/ay1hV6OlegS.ico" class="brand-icon" alt="Facebook"></a>
@@ -122,22 +160,18 @@
                 <!-- Dipa Das -->
                 <div class="group bg-white p-6 rounded-3xl shadow-md border border-slate-100 hover:shadow-2xl transition-all duration-500 text-center">
                     <img src="https://dsat.bd/storage/team_photos/lTAmL06vwSNyOTnYZwT0kDkMf00ZsOBHRnbSl7rP.png" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg mx-auto mb-4 grayscale group-hover:grayscale-0 transition-all" alt="Dipa Das">
-                    <h3 class="text-lg font-bold text-slate-800 leading-tight">Dipa Das</h3>
+                    <h3 class="text-lg font-bold text-slate-800">Dipa Das</h3>
                     <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4 mt-1">Team Member</p>
                     <div class="flex justify-center gap-4">
                         <a href="https://www.facebook.com/Dipannitadashiya" target="_blank"><img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/ay1hV6OlegS.ico" class="brand-icon" alt="Facebook"></a>
                         <a href="https://www.instagram.com/hiya_smiles" target="_blank"><img src="https://static.cdninstagram.com/rsrc.php/yr/r/rzWiSjZRxk5.webp" class="brand-icon" alt="Instagram"></a>
                     </div>
                 </div>
-
             </div>
         </section>
     </main>
 
     <footer class="bg-slate-900 text-white py-16 px-6 text-center">
-        <div class="mb-4">
-            <img src="logo.svg" alt="DSATBD" class="h-10 mx-auto opacity-50 grayscale hover:grayscale-0 transition-all">
-        </div>
         <h2 class="text-2xl font-bold mb-4">Get In Touch</h2>
         <a href="mailto:contact@dsat.bd" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-full transition-colors shadow-lg mb-8">
             contact@dsat.bd
