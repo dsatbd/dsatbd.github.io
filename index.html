@@ -25,8 +25,8 @@
         
         <!-- Network Links -->
         <section class="max-w-4xl mx-auto mb-16">
-            <div class="glass p-8 rounded-3xl shadow-2xl border border-white/20">
-                <h2 class="text-2xl font-800 text-slate-800 mb-6 flex items-center gap-2">
+            <div class="glass p-8 rounded-3xl shadow-2xl border border-white/20 text-center">
+                <h2 class="text-2xl font-800 text-slate-800 mb-6 flex items-center justify-center gap-2">
                     <span class="w-2 h-8 bg-blue-600 rounded-full"></span>
                     Network Portals
                 </h2>
@@ -42,16 +42,17 @@
         <section class="mb-20">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-extrabold text-slate-800 mb-2">Our Elite Team</h2>
-                <p class="text-slate-500">The core minds driving our innovation</p>
+                <p class="text-slate-500">Refreshing this page will shuffle the team order</p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Team Container with Shuffle Logic -->
+            <div id="team-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 
                 <!-- Hrishikesh Sarkar -->
                 <div class="group bg-white p-6 rounded-3xl shadow-md border border-slate-100 hover:shadow-2xl transition-all duration-500 text-center">
                     <img src="https://dsat.bd/storage/team_photos/BmvRTqQy9Z3TA1oQXICC5B28xMrLLkFnsVDcHwjN.jpg" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg mx-auto mb-4 grayscale group-hover:grayscale-0 transition-all" alt="Hrishikesh Sarkar">
-                    <h3 class="text-lg font-bold text-slate-800">Hrishikesh Sarkar</h3>
-                    <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4">Team Member</p>
+                    <h3 class="text-lg font-bold text-slate-800 leading-tight">Hrishikesh Sarkar</h3>
+                    <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4 mt-1">Core Developer</p>
                     <div class="flex justify-center gap-4">
                         <a href="https://github.com/ProfBackend" target="_blank"><img src="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" class="brand-icon" alt="GitHub"></a>
                         <a href="https://www.facebook.com/shopno.choora" target="_blank"><img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/ay1hV6OlegS.ico" class="brand-icon" alt="Facebook"></a>
@@ -61,8 +62,8 @@
                 <!-- Sajjad Hosain -->
                 <div class="group bg-white p-6 rounded-3xl shadow-md border border-slate-100 hover:shadow-2xl transition-all duration-500 text-center">
                     <img src="https://dsat.bd/storage/team_photos/gqREB1v3SutRmMhgY8ht1QE4MiRSoLyrcBDc9mhT.jpg" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg mx-auto mb-4 grayscale group-hover:grayscale-0 transition-all" alt="Sajjad Hosain">
-                    <h3 class="text-lg font-bold text-slate-800">Sajjad Hosain</h3>
-                    <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4">Team Member</p>
+                    <h3 class="text-lg font-bold text-slate-800 leading-tight">Sajjad Hosain</h3>
+                    <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4 mt-1">Team Member</p>
                     <div class="flex justify-center gap-4">
                         <a href="https://github.com/sajjadhosain" target="_blank"><img src="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" class="brand-icon" alt="GitHub"></a>
                         <a href="https://www.facebook.com/sajjadhosainayan" target="_blank"><img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/ay1hV6OlegS.ico" class="brand-icon" alt="Facebook"></a>
@@ -73,8 +74,8 @@
                 <!-- Md Nayan Chowdhury -->
                 <div class="group bg-white p-6 rounded-3xl shadow-md border border-slate-100 hover:shadow-2xl transition-all duration-500 text-center">
                     <img src="https://ui-avatars.com/api/?name=Md+Nayan+Chowdhury&background=0D8ABC&color=fff&size=128" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg mx-auto mb-4" alt="Md Nayan Chowdhury">
-                    <h3 class="text-lg font-bold text-slate-800">Md Nayan Chowdhury</h3>
-                    <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4">Team Member</p>
+                    <h3 class="text-lg font-bold text-slate-800 leading-tight">Md Nayan Chowdhury</h3>
+                    <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4 mt-1">Team Member</p>
                     <div class="flex justify-center gap-4">
                         <a href="https://github.com/eyesoftbd" target="_blank"><img src="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" class="brand-icon" alt="GitHub"></a>
                     </div>
@@ -83,8 +84,8 @@
                 <!-- Md Mahamodur Rahaman -->
                 <div class="group bg-white p-6 rounded-3xl shadow-md border border-slate-100 hover:shadow-2xl transition-all duration-500 text-center">
                     <img src="https://dsat.bd/storage/team_photos/pcLYitiWmzmVdJjgKWnulzwIy0JNRS7lYj8AibKA.jpg" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg mx-auto mb-4 grayscale group-hover:grayscale-0 transition-all" alt="Md Mahamodur Rahaman">
-                    <h3 class="text-lg font-bold text-slate-800">Mahamodur Rahaman</h3>
-                    <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4">Team Member</p>
+                    <h3 class="text-lg font-bold text-slate-800 leading-tight">Mahamodur Rahaman</h3>
+                    <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4 mt-1">Team Member</p>
                     <div class="flex justify-center gap-4">
                         <a href="https://www.facebook.com/mahmodur.rahman.541" target="_blank"><img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/ay1hV6OlegS.ico" class="brand-icon" alt="Facebook"></a>
                     </div>
@@ -93,8 +94,8 @@
                 <!-- Md Toriqul Hassan -->
                 <div class="group bg-white p-6 rounded-3xl shadow-md border border-slate-100 hover:shadow-2xl transition-all duration-500 text-center">
                     <img src="https://dsat.bd/storage/team_photos/B2xsC8bhztPXXicttsj7x5WdMig2Xp3oSsHxjn9m.jpg" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg mx-auto mb-4 grayscale group-hover:grayscale-0 transition-all" alt="Md Toriqul Hassan">
-                    <h3 class="text-lg font-bold text-slate-800">Toriqul Hassan</h3>
-                    <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4">Team Member</p>
+                    <h3 class="text-lg font-bold text-slate-800 leading-tight">Toriqul Hassan</h3>
+                    <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4 mt-1">Team Member</p>
                     <div class="flex justify-center gap-4">
                         <a href="https://www.facebook.com/toriqulhasan.tarak" target="_blank"><img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/ay1hV6OlegS.ico" class="brand-icon" alt="Facebook"></a>
                     </div>
@@ -103,8 +104,8 @@
                 <!-- A. K. M. Bashiul Alam -->
                 <div class="group bg-white p-6 rounded-3xl shadow-md border border-slate-100 hover:shadow-2xl transition-all duration-500 text-center">
                     <img src="https://dsat.bd/storage/team_photos/Epe8K4k0xByHTsDWtM4TXEZKeI66DHJHVGSXG2JV.jpg" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg mx-auto mb-4 grayscale group-hover:grayscale-0 transition-all" alt="A. K. M. Bashiul Alam">
-                    <h3 class="text-lg font-bold text-slate-800">A.K.M Basiul Alam</h3>
-                    <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4">Team Member</p>
+                    <h3 class="text-lg font-bold text-slate-800 leading-tight">A.K.M Basiul Alam</h3>
+                    <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4 mt-1">Team Member</p>
                     <div class="flex justify-center gap-4">
                         <a href="https://www.facebook.com/Basourav.3" target="_blank"><img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/ay1hV6OlegS.ico" class="brand-icon" alt="Facebook"></a>
                     </div>
@@ -113,8 +114,8 @@
                 <!-- Dipa Das -->
                 <div class="group bg-white p-6 rounded-3xl shadow-md border border-slate-100 hover:shadow-2xl transition-all duration-500 text-center">
                     <img src="https://dsat.bd/storage/team_photos/lTAmL06vwSNyOTnYZwT0kDkMf00ZsOBHRnbSl7rP.png" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg mx-auto mb-4 grayscale group-hover:grayscale-0 transition-all" alt="Dipa Das">
-                    <h3 class="text-lg font-bold text-slate-800">Dipa Das</h3>
-                    <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4">Team Member</p>
+                    <h3 class="text-lg font-bold text-slate-800 leading-tight">Dipa Das</h3>
+                    <p class="text-blue-600 text-xs font-semibold uppercase tracking-wider mb-4 mt-1">Team Member</p>
                     <div class="flex justify-center gap-4">
                         <a href="https://www.facebook.com/Dipannitadashiya" target="_blank"><img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/ay1hV6OlegS.ico" class="brand-icon" alt="Facebook"></a>
                         <a href="https://www.instagram.com/hiya_smiles" target="_blank"><img src="https://static.cdninstagram.com/rsrc.php/yr/r/rzWiSjZRxk5.webp" class="brand-icon" alt="Instagram"></a>
@@ -135,5 +136,22 @@
         </div>
     </footer>
 
+    <!-- JavaScript to shuffle team members on page load -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.getElementById('team-container');
+            const members = Array.from(container.children);
+
+            // Fisher-Yates Shuffle Algorithm
+            for (let i = members.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [members[i], members[j]] = [members[j], members[i]];
+            }
+
+            // Append back to container
+            container.innerHTML = "";
+            members.forEach(member => container.appendChild(member));
+        });
+    </script>
 </body>
 </html>
