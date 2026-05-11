@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DSATBD | Dream Soft and Tech</title>
+    
+    <!-- Browser Icon (Favicon) -->
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
@@ -12,12 +16,17 @@
         .bg-gradient-custom { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #9333ea 100%); }
         .brand-icon { width: 20px; height: 20px; transition: transform 0.3s ease; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); }
         .brand-icon:hover { transform: translateY(-3px) scale(1.1); }
+        .logo-img { height: 80px; width: auto; margin: 0 auto; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
-    <header class="bg-gradient-custom pt-20 pb-32 px-6 text-center text-white">
-        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-4">DSATBD</h1>
+    <header class="bg-gradient-custom pt-16 pb-32 px-6 text-center text-white">
+        <!-- Logo Implementation -->
+        <div class="mb-6">
+            <img src="logo.svg" alt="DSATBD Logo" class="logo-img">
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">DSATBD</h1>
         <p class="text-xl opacity-90 max-w-2xl mx-auto font-medium">Official Links & Executive Team Directory</p>
     </header>
 
@@ -45,7 +54,6 @@
                 <p class="text-slate-500">Refreshing this page will shuffle the team order</p>
             </div>
 
-            <!-- Team Container with Shuffle Logic -->
             <div id="team-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 
                 <!-- Hrishikesh Sarkar -->
@@ -127,6 +135,9 @@
     </main>
 
     <footer class="bg-slate-900 text-white py-16 px-6 text-center">
+        <div class="mb-4">
+            <img src="logo.svg" alt="DSATBD" class="h-10 mx-auto opacity-50 grayscale hover:grayscale-0 transition-all">
+        </div>
         <h2 class="text-2xl font-bold mb-4">Get In Touch</h2>
         <a href="mailto:contact@dsat.bd" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-full transition-colors shadow-lg mb-8">
             contact@dsat.bd
@@ -136,19 +147,14 @@
         </div>
     </footer>
 
-    <!-- JavaScript to shuffle team members on page load -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const container = document.getElementById('team-container');
             const members = Array.from(container.children);
-
-            // Fisher-Yates Shuffle Algorithm
             for (let i = members.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [members[i], members[j]] = [members[j], members[i]];
             }
-
-            // Append back to container
             container.innerHTML = "";
             members.forEach(member => container.appendChild(member));
         });
