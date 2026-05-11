@@ -1,1 +1,78 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSATBD - Dream Soft and Tech</title>
+    <style>
+        :root {
+            --primary: #1a2a6c;
+            --accent: #00a8ff;
+            --text-dark: #2f3640;
+            --text-light: #f5f6fa;
+            --bg: #ffffff;
+        }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; margin: 0; background-color: #f8f9fa; color: var(--text-dark); line-height: 1.6; }
+        header { background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); color: white; padding: 4rem 1rem; text-align: center; }
+        .container { max-width: 900px; margin: -3rem auto 3rem; padding: 0 1rem; }
+        
+        /* Links Card */
+        .card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 2rem; }
+        h2 { color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-top: 0; }
+        .links-list { list-style: none; padding: 0; }
+        .links-list li { margin: 15px 0; padding: 10px; background: #f1f2f6; border-radius: 8px; transition: 0.3s; }
+        .links-list li:hover { background: #e1e2e6; transform: translateX(5px); }
+        .links-list a { color: var(--primary); text-decoration: none; font-weight: 600; display: block; }
+
+        /* Team Grid */
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+        .member-card { background: #fff; padding: 1rem; border-radius: 8px; border: 1px solid #ddd; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .member-card:hover { border-color: var(--accent); }
+
+        /* Footer */
+        footer { background: var(--primary); color: white; text-align: center; padding: 3rem 1rem; margin-top: 4rem; }
+        .email-link { color: var(--accent); text-decoration: none; font-weight: bold; font-size: 1.2rem; }
+        .email-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>DSATBD</h1>
+    <p>Official Links & Team Directory</p>
+</header>
+
+<div class="container">
+    <!-- Links Section -->
+    <section class="card">
+        <h2>Network Portals</h2>
+        <ul class="links-list">
+            <li><a href="https://dsat.bd" target="_blank">🌐 dsat.bd</a></li>
+            <li><a href="https://dsatbd.com" target="_blank">🌐 dsatbd.com</a></li>
+            <li><a href="https://dreamsoftandtech.com" target="_blank">🌐 dreamsoftandtech.com</a></li>
+        </ul>
+    </section>
+
+    <!-- Team Section -->
+    <section class="card">
+        <h2>Our Team</h2>
+        <div class="team-grid">
+            <div class="member-card">Hrishikesh Sarkar</div>
+            <div class="member-card">Sajjad Hosain</div>
+            <div class="member-card">Md Nayan Chowdhury</div>
+            <div class="member-card">Md Mahamodur Rahaman</div>
+            <div class="member-card">Dipa Das</div>
+            <div class="member-card">Md Toriqul Hassan</div>
+            <div class="member-card">A. K. M. Bashiul Alam</div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>For inquiries, please contact us at:</p>
+    <a href="mailto:contact@dsat.bd" class="email-link">contact@dsat.bd</a>
+    <p style="margin-top: 2rem; opacity: 0.7;">&copy; 2026 Dream Soft and Tech (DSATBD). All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
