@@ -14,20 +14,32 @@
         }
         body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; margin: 0; background-color: #f8f9fa; color: var(--text-dark); line-height: 1.6; }
         header { background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); color: white; padding: 4rem 1rem; text-align: center; }
-        .container { max-width: 900px; margin: -3rem auto 3rem; padding: 0 1rem; }
+        .container { max-width: 1000px; margin: -3rem auto 3rem; padding: 0 1rem; }
         
         /* Links Card */
         .card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 2rem; }
-        h2 { color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-top: 0; }
-        .links-list { list-style: none; padding: 0; }
-        .links-list li { margin: 15px 0; padding: 10px; background: #f1f2f6; border-radius: 8px; transition: 0.3s; }
-        .links-list li:hover { background: #e1e2e6; transform: translateX(5px); }
-        .links-list a { color: var(--primary); text-decoration: none; font-weight: 600; display: block; }
+        h2 { color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-top: 0; text-align: center; }
+        .links-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .links-list li { padding: 10px 20px; background: #f1f2f6; border-radius: 30px; transition: 0.3s; }
+        .links-list li:hover { background: var(--accent); transform: translateY(-3px); }
+        .links-list a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        .links-list li:hover a { color: white; }
 
         /* Team Grid */
-        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
-        .member-card { background: #fff; padding: 1rem; border-radius: 8px; border: 1px solid #ddd; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .member-card:hover { border-color: var(--accent); }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .member-link { text-decoration: none; color: inherit; }
+        .member-card { background: #fff; padding: 1.5rem; border-radius: 12px; border: 1px solid #eee; text-align: center; transition: 0.3s; height: 100%; box-sizing: border-box; }
+        .member-card:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        
+        .member-img { 
+            width: 100px; 
+            height: 100px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            margin-bottom: 1rem; 
+            border: 3px solid #f1f2f6;
+        }
+        .member-name { font-weight: 700; color: var(--primary); font-size: 1.1rem; }
 
         /* Footer */
         footer { background: var(--primary); color: white; text-align: center; padding: 3rem 1rem; margin-top: 4rem; }
@@ -47,9 +59,9 @@
     <section class="card">
         <h2>Network Portals</h2>
         <ul class="links-list">
-            <li><a href="https://dsat.bd" target="_blank">🌐 dsat.bd</a></li>
-            <li><a href="https://dsatbd.com" target="_blank">🌐 dsatbd.com</a></li>
-            <li><a href="https://dreamsoftandtech.com" target="_blank">🌐 dreamsoftandtech.com</a></li>
+            <li><a href="https://dsat.bd" target="_blank">dsat.bd</a></li>
+            <li><a href="https://dsatbd.com" target="_blank">dsatbd.com</a></li>
+            <li><a href="https://dreamsoftandtech.com" target="_blank">dreamsoftandtech.com</a></li>
         </ul>
     </section>
 
@@ -57,13 +69,61 @@
     <section class="card">
         <h2>Our Team</h2>
         <div class="team-grid">
-            <a href="https://dsat.bd/team"><div class="member-card">Hrishikesh Sarkar</div></a>
-            <a href="https://dsat.bd/team"><div class="member-card">Sajjad Hosain</div></a>
-            <a href="https://dsat.bd/team"><div class="member-card">Md Nayan Chowdhury</div></a>
-            <a href="https://dsat.bd/team"><div class="member-card">Md Mahamodur Rahaman</div></a>
-            <a href="https://dsat.bd/team"><div class="member-card">Dipa Das</div></a>
-            <a href="https://dsat.bd/team"><div class="member-card">Md Toriqul Hassan</div></a>
-            <a href="https://dsat.bd/team"><div class="member-card">A. K. M. Bashiul Alam</div></a>
+            <!-- Hrishikesh Sarkar -->
+            <a href="https://dsat.bd/team" class="member-link">
+                <div class="member-card">
+                    <img src="https://dsat.bd/storage/team_photos/BmvRTqQy9Z3TA1oQXICC5B28xMrLLkFnsVDcHwjN.jpg" alt="Hrishikesh Sarkar" class="member-img">
+                    <div class="member-name">Hrishikesh Sarkar</div>
+                </div>
+            </a>
+
+            <!-- Sajjad Hosain -->
+            <a href="https://dsat.bd/team" class="member-link">
+                <div class="member-card">
+                    <img src="https://dsat.bd/storage/team_photos/gqREB1v3SutRmMhgY8ht1QE4MiRSoLyrcBDc9mhT.jpg" alt="Sajjad Hosain" class="member-img">
+                    <div class="member-name">Sajjad Hosain</div>
+                </div>
+            </a>
+
+            <!-- Md Nayan Chowdhury -->
+            <a href="https://dsat.bd/team" class="member-link">
+                <div class="member-card">
+                    <img src="https://ui-avatars.com/api/?name=Md+Nayan+Chowdhury&background=random" alt="Md Nayan Chowdhury" class="member-img">
+                    <div class="member-name">Md Nayan Chowdhury</div>
+                </div>
+            </a>
+
+            <!-- Md Mahamodur Rahaman -->
+            <a href="https://dsat.bd/team" class="member-link">
+                <div class="member-card">
+                    <img src="https://dsat.bd/storage/team_photos/pcLYitiWmzmVdJjgKWnulzwIy0JNRS7lYj8AibKA.jpg" alt="Md Mahamodur Rahaman" class="member-img">
+                    <div class="member-name">Md Mahamodur Rahaman</div>
+                </div>
+            </a>
+
+            <!-- Dipa Das -->
+            <a href="https://dsat.bd/team" class="member-link">
+                <div class="member-card">
+                    <img src="https://dsat.bd/storage/team_photos/lTAmL06vwSNyOTnYZwT0kDkMf00ZsOBHRnbSl7rP.png" alt="Dipa Das" class="member-img">
+                    <div class="member-name">Dipa Das</div>
+                </div>
+            </a>
+
+            <!-- Md Toriqul Hassan -->
+            <a href="https://dsat.bd/team" class="member-link">
+                <div class="member-card">
+                    <img src="https://dsat.bd/storage/team_photos/B2xsC8bhztPXXicttsj7x5WdMig2Xp3oSsHxjn9m.jpg" alt="Md Toriqul Hassan" class="member-img">
+                    <div class="member-name">Md Toriqul Hassan</div>
+                </div>
+            </a>
+
+            <!-- A. K. M. Bashiul Alam -->
+            <a href="https://dsat.bd/team" class="member-link">
+                <div class="member-card">
+                    <img src="https://dsat.bd/storage/team_photos/Epe8K4k0xByHTsDWtM4TXEZKeI66DHJHVGSXG2JV.jpg" alt="A. K. M. Bashiul Alam" class="member-img">
+                    <div class="member-name">A. K. M. Bashiul Alam</div>
+                </div>
+            </a>
         </div>
     </section>
 </div>
