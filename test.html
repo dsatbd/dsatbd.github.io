@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSATBD | Dream Soft and Tech</title>
+    
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-green: #2ecc71;
+            --dark-bg: #0f0f0f;
+            --card-bg: #1a1a1a;
+        }
+
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--dark-bg);
+            color: #ffffff;
+        }
+
+        .glass { 
+            background: rgba(26, 26, 26, 0.8); 
+            backdrop-filter: blur(10px); 
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Header Gradient matching Portfolio Green */
+        .bg-gradient-custom { 
+            background: linear-gradient(180deg, #111 0%, #0f0f0f 100%);
+            border-bottom: 1px solid rgba(46, 204, 113, 0.2);
+        }
+
+        /* Responsive Logo Animation */
+        .logo-container {
+            width: 100%;
+            max-width: 220px;
+            margin: 0 auto;
+        }
+        @media (min-width: 768px) {
+            .logo-container { max-width: 450px; }
+        }
+
+        .animated-logo {
+            width: 100%;
+            height: auto;
+            display: block;
+            mask: url(logo.svg) no-repeat center;
+            -webkit-mask: url(logo.svg) no-repeat center;
+            mask-size: contain;
+            -webkit-mask-size: contain;
+            background: linear-gradient(to right, #2ecc71 0%, #27ae60 25%, #ffffff 50%, #2ecc71 75%, #27ae60 100%);
+            background-size: 200% auto;
+            animation: shimmer 4s linear infinite;
+        }
+
+        @keyframes shimmer {
+            to { background-position: 200% center; }
+        }
+
+        /* Card Styles */
+        .member-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .member-card:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(46, 204, 113, 0.1);
+        }
+
+        .brand-icon { 
+            width: 20px; height: 20px; 
+            transition: transform 0.3s ease; 
+            filter: invert(1) brightness(0.8); /* Dark mode visibility */
+        }
+        .brand-icon:hover { transform: scale(1.2); filter: invert(1) brightness(1); }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-thumb { background: var(--primary-green); border-radius: 10px; }
+    </style>
+</head>
+<body class="pb-20">
+
+    <header class="bg-gradient-custom pt-20 pb-40 px-6 text-center">
+        <div class="logo-container mb-8">
+            <div class="animated-logo h-24 md:h-40"></div>
+        </div>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">Official Links & Team Directory</p>
+    </header>
+
+    <main class="container mx-auto px-4 -mt-24">
+        
+        <section class="max-w-4xl mx-auto mb-16">
+            <div class="glass p-8 rounded-2xl shadow-2xl text-center">
+                <h2 class="text-xl font-bold text-white mb-6 flex items-center justify-center gap-3">
+                    <span class="w-1.5 h-6 bg-[#2ecc71] rounded-full"></span>
+                    Quick Portals
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="https://dsat.bd" target="_blank" class="p-4 bg-black/40 rounded-xl font-semibold text-gray-300 border border-white/5 hover:border-[#2ecc71] hover:text-[#2ecc71] transition-all">dsat.bd</a>
+                    <a href="https://dsatbd.com" target="_blank" class="p-4 bg-black/40 rounded-xl font-semibold text-gray-300 border border-white/5 hover:border-[#2ecc71] hover:text-[#2ecc71] transition-all">dsatbd.com</a>
+                    <a href="https://dreamsoftandtech.com" target="_blank" class="p-4 bg-black/40 rounded-xl font-semibold text-gray-300 border border-white/5 hover:border-[#2ecc71] hover:text-[#2ecc71] transition-all">dreamsoftandtech.com</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-white mb-2">Our Elite Team</h2>
+                <div class="h-1 w-20 bg-[#2ecc71] mx-auto rounded-full opacity-50"></div>
+            </div>
+
+            <div id="team-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="member-card p-6 rounded-2xl text-center group">
+                    <img src="https://dsat.bd/storage/team_photos/BmvRTqQy9Z3TA1oQXICC5B28xMrLLkFnsVDcHwjN.jpg" class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-transparent group-hover:border-[#2ecc71] transition-all object-cover" alt="Hriday">
+                    <h3 class="text-lg font-bold text-white">Hrishikesh Sarkar</h3>
+                    <p class="text-[#2ecc71] text-xs font-semibold uppercase mb-4 tracking-widest">Core Developer</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="https://github.com/ProfBackend" target="_blank"><img src="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" class="brand-icon"></a>
+                        <a href="https://fb.com/shopno.choora" target="_blank"><img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/ay1hV6OlegS.ico" class="brand-icon"></a>
+                    </div>
+                </div>
+
+                <div class="member-card p-6 rounded-2xl text-center group">
+                    <img src="https://dsat.bd/storage/team_photos/gqREB1v3SutRmMhgY8ht1QE4MiRSoLyrcBDc9mhT.jpg" class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-transparent group-hover:border-[#2ecc71] transition-all object-cover" alt="Sajjad">
+                    <h3 class="text-lg font-bold text-white">Sajjad Hosain</h3>
+                    <p class="text-[#2ecc71] text-xs font-semibold uppercase mb-4 tracking-widest">Team Member</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="https://github.com/sajjadhosain" target="_blank"><img src="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" class="brand-icon"></a>
+                        <a href="https://fb.com/sajjadhosainayan" target="_blank"><img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/ay1hV6OlegS.ico" class="brand-icon"></a>
+                    </div>
+                </div>
+
+                <div class="member-card p-6 rounded-2xl text-center group">
+                    <img src="https://dsat.bd/storage/team_photos/B2xsC8bhztPXXicttsj7x5WdMig2Xp3oSsHxjn9m.jpg" class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-transparent group-hover:border-[#2ecc71] transition-all object-cover" alt="Toriqul">
+                    <h3 class="text-lg font-bold text-white">Md. Toriqul Hassan</h3>
+                    <p class="text-[#2ecc71] text-xs font-semibold uppercase mb-4 tracking-widest">Team Member</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="https://www.facebook.com/toriqulhasan.tarak" target="_blank"><img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/ay1hV6OlegS.ico" class="brand-icon"></a>
+                    </div>
+                </div>
+
+                <div class="member-card p-6 rounded-2xl text-center group">
+                    <img src="https://dsat.bd/storage/team_photos/lTAmL06vwSNyOTnYZwT0kDkMf00ZsOBHRnbSl7rP.png" class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-transparent group-hover:border-[#2ecc71] transition-all object-cover" alt="Dipa">
+                    <h3 class="text-lg font-bold text-white">Dipa Das</h3>
+                    <p class="text-[#2ecc71] text-xs font-semibold uppercase mb-4 tracking-widest">Team Member</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="https://fb.com/Dipannitadashiya" target="_blank"><img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/ay1hV6OlegS.ico" class="brand-icon"></a>
+                    </div>
+                </div>
+
+                <div class="member-card p-6 rounded-2xl text-center group">
+                    <img src="https://ui-avatars.com/api/?name=Md+Nayan+Chowdhury&background=2ecc71&color=fff" class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-transparent group-hover:border-[#2ecc71] transition-all" alt="Nayan">
+                    <h3 class="text-lg font-bold text-white">Md Nayan Chowdhury</h3>
+                    <p class="text-[#2ecc71] text-xs font-semibold uppercase mb-4 tracking-widest">Team Member</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="https://github.com/eyesoftbd" target="_blank"><img src="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" class="brand-icon"></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-20 py-10 text-center border-t border-white/5">
+        <p class="text-gray-500 text-sm italic">Design by DSAT | &copy; 2026 DREAM SOFT AND TECH</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.getElementById('team-container');
+            const members = Array.from(container.children);
+            for (let i = members.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [members[i], members[j]] = [members[j], members[i]];
+            }
+            container.innerHTML = "";
+            members.forEach(member => container.appendChild(member));
+        });
+    </script>
+</body>
+</html>
